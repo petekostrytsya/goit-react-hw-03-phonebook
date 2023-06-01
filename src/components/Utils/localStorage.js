@@ -1,11 +1,11 @@
 const loadLocalStorage = key => {
-    const successiveState = localStorage.getItem(key);
-    return successiveState === null ? undefined : JSON.parse(successiveState);  
+    const loadLocalStorageState = localStorage.getItem(key);
+    return loadLocalStorageState === null ? undefined : JSON.parse(loadLocalStorageState);  
 };
 
 const saveLocalStorage = (key, value) => {
-    const successiveState = JSON.stringify(value);
-    localStorage.setItem(key, successiveState);
+    const saveLocalStorageState = JSON.stringify(value);
+    localStorage.setItem(key, saveLocalStorageState);
 };
 
 const removeLocalStorage = key => {
